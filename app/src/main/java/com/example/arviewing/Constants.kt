@@ -6,19 +6,19 @@ object Constants {
         val productList = ArrayList<ProductModel>()
 
 
-        val paintedStawberryCake = ProductModel(
+        val paintedStrawberryCake = ProductModel(
             productName = "Hand-painted Strawberry Cake",
             productDescr = "Fresh stawberries with icing",
             productImage = R.drawable.ic_hand_painted_strawberry,
             productModelUrl = "models/handpainted_watercolor_cake.glb"
         )
-        productList.add(paintedStawberryCake)
+        productList.add(paintedStrawberryCake)
 
         val strawberryCake = ProductModel(
             productName = "Strawberry Cake",
             productDescr = "Layered cake with icing",
             productImage = R.drawable.ic_strawberry_cake,
-            productModelUrl = "models/strawberry_cale.glb"
+            productModelUrl = "models/strawberry_cake.glb"
         )
         productList.add(strawberryCake)
 

@@ -1,6 +1,7 @@
 package com.example.arviewing
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
@@ -8,6 +9,8 @@ import com.example.arviewing.databinding.ItemProductCardBinding
 
 class ProductViewAdapter (val products: ArrayList<ProductModel>) :
     RecyclerView.Adapter<ProductViewAdapter.ViewHolder>() {
+
+    var onItemClick: ((ProductModel) -> Unit)? = null
 
     class ViewHolder(binding: ItemProductCardBinding) : RecyclerView.ViewHolder(binding.root) {
         var productViewCard = binding.productViewCard
@@ -31,6 +34,10 @@ class ProductViewAdapter (val products: ArrayList<ProductModel>) :
         holder.productName.text = model.getProductName()
         holder.productDesc.text = model.getProductDesc()
         holder.productImage.setImageResource(model.getProductImage())
-        //holder.productImage.setImageResource(model.getProductImage())
+
+        holder.productViewCard.setOnClickListener {
+            onItemClick?.invoke(model)
+        }
     }
 }
+

@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ProductViewActivity">
 
-    <io.github.sceneview.ar.ArSceneView
+    <io.github.sceneview.SceneView
         android:id="@+id/arSceneView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 
 </FrameLayout>

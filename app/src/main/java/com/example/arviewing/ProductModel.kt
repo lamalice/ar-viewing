@@ -1,5 +1,7 @@
 package com.example.arviewing
 
+import android.os.Parcelable
+
 class ProductModel(
     private var productName: String,
     private var productDescr: String,

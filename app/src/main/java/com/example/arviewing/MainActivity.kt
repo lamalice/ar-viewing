@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.arviewing.databinding.ActivityMainBinding
 
+const val PRODUCT_NAME = "PRODUCT_NAME"
+const val PRODUCT_DESCRIPTION = "PRODUCT_DESCRIPTION"
+const val PRODUCT_GLB_URL = "PRODUCT_GLB_URL"
+const val PRODUCT_IMAGE_URL = "PRODUCT_IMAGE_URL"
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         productList = Constants.defaultProductList()
         setupExerciseStatusRecyclerView()
 
+       productViewAdapter?.onItemClick =  {
+            val intent = Intent(this, ProductViewActivity::class.java)
+           intent.putExtra(PRODUCT_GLB_URL, it.getProductModelUrl())
+           startActivity(intent)
+        }
     }
 
     private fun setupExerciseStatusRecyclerView(){
@@ -29,7 +38,9 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         productViewAdapter = ProductViewAdapter(productList!!)
         binding.productViewRecycler.adapter = productViewAdapter
+        binding.productViewRecycler.isNestedScrollingEnabled = false;
     }
+
 
 
 }

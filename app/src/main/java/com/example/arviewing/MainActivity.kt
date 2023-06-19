@@ -4,6 +4,7 @@ package com.example.arviewing
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.arviewing.databinding.ActivityMainBinding
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, io.github.sceneview.ar.R.color.material_grey_300))
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         productList = Constants.defaultProductList()

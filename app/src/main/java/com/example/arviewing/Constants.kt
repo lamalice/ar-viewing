@@ -16,7 +16,7 @@ object Constants {
 
         val strawberryCake = ProductModel(
             productName = "Strawberry Cake",
-            productDescr = "Layered cake with icing",
+            productDescr = "Layered cake with pink icing and candles",
             productImage = R.drawable.ic_strawberry_cake,
             productModelUrl = "models/strawberry_cake.glb"
         )
@@ -40,7 +40,7 @@ object Constants {
 
         val ramen = ProductModel(
             productName = "Steamy Ramen with Crab",
-            productDescr = "Egg noodles with various garnishing",
+            productDescr = "Egg noodles with various garnishing on top",
             productImage = R.drawable.ic_ramen,
             productModelUrl = "models/ramen.glb"
         )
